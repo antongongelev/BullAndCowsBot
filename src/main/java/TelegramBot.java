@@ -42,10 +42,11 @@ public class TelegramBot extends TelegramLongPollingBot {
                 switch (message.getText()) {
                     case "/play":
                         game = new Game();
-                        sendMessage(message, String.format("Поехали. Я загад четыре цифры - %s. Угадаешь?", game.getNumber()));
+                        sendMessage(message, "Поехали. Я загад четыре цифры. Угадаешь?");
                         break;
                     case "/help":
-                        sendMessage(message, "Ждешь помощи? - Тут все просто. Мы с тобой сыграем в игру 'Быки и коровы'");
+                        sendMessage(message, "Ждешь помощи? - Тут все просто. Мы с тобой сыграем в игру 'Быки и коровы'. Я загадываю четыре цифры - ты угадываешь. Бык " +
+                                "- цифра на своем месте. Корова - цифра есть, но не на своем месте. Понял?");
                         break;
                     default:
                         sendMessage(message, "Я тебя не понимаю");
