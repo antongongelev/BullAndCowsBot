@@ -36,7 +36,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     game.endGame();
                 } else {
                     game.count(message.getText());
-                    sendMessage(message, String.format("Неа, давай другое чило. Быки: %s. Коровы: %s", game.getBulls(), game.getCows()));
+                    sendMessage(message, String.format("Неа, давай другое число. Быки: %s. Коровы: %s", game.getBulls(), game.getCows()));
                 }
             } else {
                 switch (message.getText()) {
